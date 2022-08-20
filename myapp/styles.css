@@ -1,0 +1,37 @@
+#content {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+
+.info-box {
+    background-color: #dedede;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+img{
+    border-radius: 25px;
+    width: 300px;
+}
+
+.right{
+    text-align: right;
+}
+
+
+
+.btn-update{
+    
+    text-align: left;
+}
+
+.bar{
+    width: 500px;
+}
+
+.confirmation{
+    text-align: center;
+}
