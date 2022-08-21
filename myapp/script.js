@@ -1,7 +1,6 @@
 $(document).ready(() => {
     let pizzas;
     
-
     $.get('http://localhost:3000/pizzas', data => {
         pizzas = data
     }).done(() => buildInfoList())
@@ -63,8 +62,6 @@ $(document).ready(() => {
         })
     }
 
-
-
         const updateItem = id => {
             let newpizza;
 
@@ -84,38 +81,31 @@ $(document).ready(() => {
                 `
                 )
             
-            $('#changes').submit((event) => {
-                event.preventDefault()
+                $('#changes').submit((event) => {
+                    event.preventDefault()
                 
-                const change = {
+                    const change = {
                     
                     name : `${newpizza}`,
                     toppings : $(`#newText`).val()
                 }
 
                 
-            $.ajax({
-                url: `http://localhost:3000/pizzas/${id}`,
-                type: 'PUT',
-                contentType: 'application/json',
-                data: JSON.stringify(change)
+                $.ajax({
+                    url: `http://localhost:3000/pizzas/${id}`,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(change)
             
-            })
-            $(`#confirm-btn`).click(function () {
+                    })
+                    $(`#confirm-btn`).click(function () {
                 
-                $('#changes').trigger('reset')
+                    $('#changes').trigger('reset')
                   
-            })
+                 });
         
-        
-        
-            }
-            
-            
-            
-            )
-            
-        }
+            });    
+        };
     
     }
-)
+);
