@@ -2,13 +2,23 @@
   "pizzas": [
     {
       "name": "Supreme",
-      "toppings": "meat, garlic, mushrooms",
+      "toppings": "",
       "id": 1
     },
     {
       "name": "Pepperoni",
       "toppings": "onions",
       "id": 2
+    },
+    {
+      "name": "Hawaiian",
+      "toppings": "pineapple",
+      "id": 3
+    },
+    {
+      "name": "Brazilian",
+      "toppings": "cheese",
+      "id": 4
     }
   ]
 }

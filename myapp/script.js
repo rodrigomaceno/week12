@@ -65,10 +65,10 @@ $(document).ready(() => {
         const updateItem = id => {
             let newpizza;
 
-            $.get('http://localhost:3000/pizzas', id => {
+            $.get('http://localhost:3000/pizzas/' + id, id => {
             
-            newpizza = id[0].name
-            
+            newpizza = id.name
+            console.log(id)
             })
         
             $('#content').append(
@@ -86,6 +86,7 @@ $(document).ready(() => {
                 
                     const change = {
                     
+                        
                     name : `${newpizza}`,
                     toppings : $(`#newText`).val()
                 }
